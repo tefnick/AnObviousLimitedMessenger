@@ -57,7 +57,7 @@ public class ClientModel {
 		try{
 			socket = new Socket(serverName, port);
 		} catch(Exception e){
-			System.out.println(e); // do we need to show the stack trace of this exception or is the JOptionPane enough?
+			System.out.println(e); 
 			return false; 
 		}
 		String statusMessage = "Connected to " + socket.getInetAddress()+ ":" + socket.getPort();
@@ -92,7 +92,7 @@ public class ClientModel {
 	} //end start method
 	
 	/**
-	 * 
+	 * Retreives the users currently logged into the chat
 	 */
 	public void getClientList() {
 		sendMessage(new Message(Message.USERSONLINE, ""));
@@ -173,7 +173,6 @@ public class ClientModel {
 	}
 	
 
-	//setters
 	/**
 	 * updates the server name
 	 * @param serverName
@@ -197,10 +196,5 @@ public class ClientModel {
 	public void setPort(int port) {
 		this.port = port;
 	}
-	/**
-	 * 
-	 * @param string
-	 */
-
 	
 }
